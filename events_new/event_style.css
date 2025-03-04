@@ -78,10 +78,11 @@ main {
 .content {
   width: min(30vw, 400px);
   position: absolute;
+  
   top: 50%;
   left: 3rem;
   transform: translateY(-50%);
-  font: 400 0.85rem helvetica, sans-serif;
+  font: 900 3.25rem helvetica, sans-serif;
   color: white;
   text-shadow: 0 3px 8px rgba(0,0,0,0.5);
   opacity: 0;
@@ -96,7 +97,7 @@ main {
 .content .description {
   line-height: 1.7;
   margin: 1rem 0 1.5rem;
-  font-size: 0.8rem;
+  font-size: 1.1rem;
 }
 
 .content button {
@@ -114,8 +115,9 @@ main {
   animation: show 0.75s ease-in-out 0.3s forwards;
 }
 
-.nav {
+.navii {
   position: absolute;
+  font-size: 2.7rem;
   bottom: 2rem;
   left: 50%;
   transform: translateX(-50%);
@@ -123,7 +125,7 @@ main {
   user-select: none;
 }
 
-.nav .btn {
+.navii .btn {
   background-color: rgba(255,255,255,0.5);
   color: rgba(0,0,0,0.7);
   border: 2px solid rgba(0,0,0,0.6);
@@ -133,7 +135,7 @@ main {
   cursor: pointer;
 }
 
-.nav .btn:hover {
+.navii .btn:hover {
   background-color: rgba(255,255,255,0.3);
 }
 
@@ -243,11 +245,11 @@ footer {
   .item:nth-child(5) { left: calc(50% + 280px); }
   .item:nth-child(6) { left: calc(50% + 420px); opacity: 0; }
   
-  .nav {
+  .navii {
     bottom: 1rem;
   }
   
-  .nav .btn {
+  .navii .btn {
     padding: 0.5rem;
   }
 }
