@@ -1,316 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <script src="../js/scripts.js"></script>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/scripts.js"></script>    
+    <link rel="stylesheet" href="../css/styles.css">
+    <!-- <link rel="stylesheet" href="../css/hamburger.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sponsors</title>
     <style>
-      @font-face {
-      font-family: 'e-Ukraine Head';
-      src: url('https://sealzi.com/e-Ukraine Head/e-UkraineHead-Regular.otf') format('opentype');
-  }
-  
-  * {
-      margin: 0;
-      padding: 0;
-      font-family: 'e-Ukraine Head', serif;
-  }
-  
-  body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      background: #161616;
-      min-height: 100vh;
-  }
-  
-  a, i {
-    color: white;
-  }
-  
-  section::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(to bottom, #0057B7 50%, #FFD700 90%);
-      clip-path: circle(30% at right 70%);
-  }
-  
-  section::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(to right, #0057B7 0%, #FFD700 30%);
-      clip-path: circle(20% at 10% 10%);
-  }
-  
-  .container {
-      position: relative;
-      z-index: 1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      margin: 40px 0;
-  }
-  
-  .container .card {
-      position: relative;
-      width: 300px;
-      height: 400px;
-      background: rgba(255, 255, 255, 0.05);
-      margin: 20px;
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
-      border-radius: 15px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      backdrop-filter: blur(10px);
-  }
+        body {
+            font-family: 'Georgia', serif;
+            text-align: center;
+            background-color: #000000;
+            color: white;
+            margin: 0;
+            padding: 20px;
+            position: relative;
+        }
 
+        h1 {
+            font-family: cursive;
+            font-size: 50px;
+            font-weight: bold;
+            color: rgb(255, 204, 0);
+            /* text-shadow: 3px 3px 0 #ffcc00, 5px 5px 5px rgba(0, 0, 0, 0.5); */
+        }
 
-  .container .card:hover {
-    /* border: 2px solid white; */
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
-    /* box-shadow: 0 0 30px rgba(47, 70, 75, 0.8), 0 0 60px rgba(0, 212, 255, 0.6); */
-    transform: scale(1.05);
-    transition: 0.3s ease-in-out;
-}
+        /* Vertical Grey Lines */
+        .side-lines::before,
+        .side-lines::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 10px;
+            background-color: rgba(169, 169, 169, 0.5);
+        }
 
-.container .card .content {
-    transition: 0.3s ease-in-out;
-}
+        .side-lines::before {
+            left: 5%;
+        }
 
-.container .card:hover .content {
-    filter: brightness(1.3);
-}
-  
-  .container .card .content {
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      transition: 0.5s;
-  }
-  
-  .container .card:hover .content {
-      transform: translateY(-20px);
-  }
-  
-  .container .card .content .imgBx {
-      position: relative;
-      width: 150px;
-      height: 150px;
-      overflow: hidden;
-  }
-  
-  .container .card .content .imgBx img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-  }
-  
-  .container .card .content .contentBx {
-    padding: 0 24px;  
-  }
-  
-  .container .card .content .contentBx h3 {
-      color: #fff;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-weight: 500;
-      font-size: 28px;
-      text-align: center;
-      margin: 20px 0 10px;
-      line-height: 1.1em;
-  }
-  
-  .container .card .content .contentBx span {
-    display: block;
-    color: #fff;
-      font-size: 12px;
-      font-weight: 300;
-    letter-spacing: 1px;
-      text-transform: initial;
-    text-align: center;
-    text-wrap: balance;
-  }
-  
-  .container .card .sci {
-      position: absolute;
-      bottom: 40px;
-      display: flex;
-  }
-  
-  .container .card .sci li {
-      list-style: none;
-      margin: 0 6px;
-      transform: translateY(40px);
-      transition: 0.4s;
-      opacity: 0;
-  }
-  
-  .container .card:hover .sci li {
-      transform: translateY(0px);
-      opacity: 1;
-  }
-  
-  .credits {
+        .side-lines::after {
+            right: 5%;
+        }
+
+        .sponsor-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 50px;
+            padding: 20px;
+        }
+
+        .row {
+            display: flex;
+            justify-content: center;
+            gap: 80px;
+            flex-wrap: wrap;
+        }
+
+        .sponsor-box {
+            text-align: center;
+            padding: 20px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .sponsor-box:hover {
+            transform: scale(1.1);
+        }
+
+        .sponsor-logo {
+            width: 200px;
+            height: auto;
+            cursor: pointer;
+        }
+
+        .sponsor-name {
+            font-size: 22px;
+            font-weight: bold;
+            margin-top: 15px;
+            cursor: pointer;
+        }
+
+        .sponsor-category {
+            font-style: italic;
+            font-size: 18px;
+            color: #FFD700;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 35px;
+            }
+
+            .sponsor-logo {
+                width: 150px;
+            }
+
+            .sponsor-name {
+                font-size: 18px;
+            }
+
+            .sponsor-category {
+                font-size: 16px;
+            }
+        }
+
+        /* Navbar */
+ .nav {
+    background: black;
+    padding: 15px 0;
     position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.nav .main_list nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav .main_list nav ul li {
+    display: inline-block;
+}
+
+.nav .main_list nav ul li a {
     color: white;
-    bottom: 32px;
-  }
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+.nav .main_list nav ul li a:hover {
+    color: #f0a500;
+}
+
+/* Mobile Menu */
+ .burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.burger .hamburger-span {
+    background: white;
+    display: block;
+    height: 3px;
+    width: 25px;
+    margin: 5px;
+}
+
+.full-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: black;
+    z-index: 1000;
+    text-align: center;
+}
+
+.full-menu.show-menu {
+    display: block;
+}
+
+.full-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.full-menu ul li {
+    padding: 10px 0;
+}
+
+.full-menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    transition: color 0.3s;
+}
+
+.full-menu ul li a:hover {
+    color: #f0a500;
+} 
+
+/* Footer */
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 -2px 5px rgba(255, 255, 255, 0.1);
+    position: relative;
+    bottom: 0;
+}
+
+.footer-copyright {
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav .main_list {
+        display: none;
+    }
+
+    .burger {
+        display: flex;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+}
     </style>
-  </head>
+</head>
+<body class="side-lines">
+    <!-- <div id="loader"
+        style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: white; display: flex; justify-content: center; align-items: center; z-index: 9999;">
+        <dotlottie-player src="https://lottie.host/e6d792da-e5f6-4f5f-b0fb-82a9ce8a6081/MUec6cxuKL.lottie"
+            background="transparent" speed="1" style="width: 150px; height: 150px" loop autoplay></dotlottie-player>
+    </div> -->
+    <nav class="nav">
+        <div class="container">
+            <div class="logo">
+                <a href="../index.html"></a>
+            </div>
+            <div class="burger">
+                <span class="hamburger-span"></span>
+                <span class="hamburger-span"></span>
+                <span class="hamburger-span"></span>
+            </div>
+            <div class="full-menu">
+                <ul>
+                    <li><a href="../events_new/event.html">Events</a></li>
+                    <li><a href="../97thteam/TEAM-MOBILE.html">Our Team</a></li>
+                    <li><a href="../sponsors/sponsor.html">Our Sponsors</a></li>
+                    <li><a href="../Gallery/gallery.html">Gallery</a></li>
+                    <li><a href="../contact-us/CONTACTUS.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="main_list" id="navbar">
+                <nav>
+                    <ul>
+                        <li><a href="../events_new/event.html">Events</a></li>
+                        <li><a href="../97thteam/TEAM-PC.html">Our Team</a></li>
+                        <li><a href="../sponsors/sponsor.html">Our Sponsors</a></li>
+                        <li><a href="../Gallery/gallery.html">Gallery</a></li>
+                        <li><a href="../contact-us/CONTACTUS.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </nav>
+    <h1 style="margin-top: 8rem; margin-bottom: 4rem;"> Marketing  Sponsors</h1>
+    <!-- <h2 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-size: 3rem; color: rgb(204, 152, 54); ">Marketing Sponsors</h2> -->
+    <div class="sponsor-container">
+        <div class="row">
+            <div class="sponsor-box" onclick="location.href='http://vilasjavdekar.co/vj-festive-season/?gad_source=1&gclid=Cj0KCQjwm7q-BhDRARIsACD6-fUcdIkzrU896ixIj2kxTIwYwN8fA36ugWD3v1oYzulrWro6cNHjWpsaAhFeEALw_wcB';">
+                <img src="SPONSOR LOGO/Screenshot 2025-01-29 231359.png" class="sponsor-logo" alt="Title Sponsor">
+                <div class="sponsor-name">VJ</div>
+                <div class="sponsor-category">Title Sponsor</div>
+            </div>
+            <div class="sponsor-box" onclick="location.href='https://amphenol.com/';">
+                <img src="SPONSOR LOGO/Screenshot 2025-03-12 121010.png" class="sponsor-logo" alt="Chief Sponsor">
+                <div class="sponsor-name">Amphenol</div>
+                <div class="sponsor-category">Chief Sponsor</div>
+            </div>
+        </div>
+
+        <!-- <div class="row">
+            <div class="sponsor-box" onclick="location.href='https://amphenol.com';">
+                <img src="SPONSOR LOGO/Screenshot 2025-03-12 121010.png" class="sponsor-logo" alt="Chief Sponsor">
+                <div class="sponsor-name">Amphenol</div>
+                <div class="sponsor-category">Chief Sponsor</div>
+            </div>
+        </div> -->
+
+        <div class="row">
+            <div class="sponsor-box" onclick="location.href='https://www.onlinesbi.sbi/';">
+                <img src="SPONSOR LOGO/images.png" class="sponsor-logo" alt="Banking Partner">
+                <div class="sponsor-name">SBI</div>
+                <div class="sponsor-category">Banking Partner</div>
+            </div>
+            <div class="sponsor-box" onclick="location.href='https://www.palmonas.com/?utm_channel=PaidSearch&utm_source=Google&utm_medium=CPC&utm_content=brandsearch&utm_adgroup=Brand%20Search&utm_campaign=GS%20-%20Brand%20Search%20-%208th%20August%202022&gad_source=1&gclid=Cj0KCQjwhMq-BhCFARIsAGvo0KezFC5iWrsNYPpZAbDNFP61R1gV3Dlk1QewQJMBsBp5ZvwdHrLsjKIaAldIEALw_wcB';">
+                <img src="SPONSOR LOGO/palmonas2.png" class="sponsor-logo" alt="Gifting Partner">
+                <div class="sponsor-name">Palmonas</div>
+                <div class="sponsor-category">Gifting Partner</div>
+            </div>
+            <div class="sponsor-box" onclick="location.href='https://saviinfra.com/';">
+                <img src="SPONSOR LOGO/WhatsApp Image 2025-03-12 at 12.15.39_924d7266.jpg" class="sponsor-logo" alt="Foundation Partner">
+                <div class="sponsor-name">Savi Infrastructures</div>
+                <div class="sponsor-category">Foundation Partner</div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="sponsor-box" onclick="location.href='https://srgeotech.com/';">
+                <img src="SPONSOR LOGO/spons png logos/SRGPL.png" class="sponsor-logo" alt="Stability Partner">
+                <div class="sponsor-name">SRGPL</div>
+                <div class="sponsor-category">Stability Partner</div>
+            </div>
+            <div class="sponsor-box" onclick="location.href='https://www.imsindia.com/';">
+                <img src="SPONSOR LOGO/IMG-20250312-WA0007.jpg" class="sponsor-logo" alt="Education Partner">
+                <div class="sponsor-name">IMS</div>
+                <div class="sponsor-category">Education Partner</div>
+            </div>
+            <div class="sponsor-box" onclick="location.href='https://triidolsgeo.com/';">
+                <img src="SPONSOR LOGO/WhatsApp Image 2025-03-12 at 12.15.38_b8cd3b8e.jpg" class="sponsor-logo" alt="Geo Excellence Partner">
+                <div class="sponsor-name">Trị-Geo</div>
+                <div class="sponsor-category">Geo Excellence Partner</div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="sponsor-box" onclick="location.href='https://www.exideindustries.com/';">
+                <img src="SPONSOR LOGO/EXIDE.png" class="sponsor-logo" alt="Strategic Partner">
+                <div class="sponsor-name">Exide</div>
+                <div class="sponsor-category">Strategic Partner</div>
+            </div>
+            <div class="sponsor-box" onclick="location.href='https://aadarshbharat.com';">
+                <img src="SPONSOR LOGO/adarsh.jpg" class="sponsor-logo" alt="Development Partner">
+                <div class="sponsor-name">Aadarsh Bharat</div>
+                <div class="sponsor-category">Development Partner</div>
+            </div>
+            <div class="sponsor-box" onclick="location.href='https://www.linkcode.in/';">
+                <img src="SPONSOR LOGO/Screenshot 2025-01-30 131106.png" class="sponsor-logo" alt="Digital Excellence Partner">
+                <div class="sponsor-name">Linkcode</div>
+                <div class="sponsor-category">Digital Excellence Partner</div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="sponsor-box" onclick="location.href='https://www.budhanibros.com/';">
+                <img src="SPONSOR LOGO/spons png logos/Budhani.png" class="sponsor-logo" alt="Snacks Partner">
+                <div class="sponsor-name">Guru Krupa Budhani</div>
+                <div class="sponsor-category">Snacks Partner</div>
+            </div>
+
+            <div class="sponsor-box" onclick="location.href='https://maxprotein.in/collections/max-protein-bar?utm_source=Google&utm_medium=CPC&utm_campaign=RatargetingPMaxOct2024&utm_term=ProteinBars&utm_content=PMaxBannersProteinBarsOct2024&gad_source=1&gclid=Cj0KCQjwhMq-BhCFARIsAGvo0Kd8hNrNIOm5XOaO2o1c3O-DomATodq922Pyy1cB7kZc4GT6f-EjWi8aAiCJEALw_wcB';">
+                <img src="SPONSOR LOGO/max.png" class="sponsor-logo" alt="Power Partner">
+                <div class="sponsor-name">Max Protein</div>
+                <div class="sponsor-category">Power Partner</div>
+            </div>
+
+            <div class="sponsor-box" onclick="location.href='https://www.blogadda.com/';">
+                <img src="SPONSOR LOGO/WhatsApp Image 2025-03-12 at 14.02.10_e0f97902.jpg" class="sponsor-logo" alt="Power Partner">
+                <div class="sponsor-name">Bloggada</div>
+                <!-- <div class="sponsor-category">Power Partner</div> -->
+            </div>
+        </div>
+    </div>
+
+    <h1 style="margin-top: 8rem; margin-bottom: 4rem;"> Media  Sponsors</h1>
+    <div class="sponsor-container">
+        <div class="row">
+            <div class="row">
+                <div class="sponsor-box" onclick="location.href='https://www.campustimespune.com/';">
+                    <img src="SPONSOR LOGO/campus-times-pune-official-logo-square-2023.png" class="sponsor-logo" alt="Banking Partner">
+                    <div class="sponsor-name">Campus Times</div>
+                </div>
+                <div class="sponsor-box" onclick="location.href='https://www.news-age.com/';">
+                    <img src="SPONSOR LOGO/media png logos/Copy of IMG_20241104_115717_222.png" class="sponsor-logo" alt="Gifting Partner">
+                    <div class="sponsor-name">NewSage</div>
+                </div>
+                <div class="sponsor-box" onclick="location.href='https://edtimes.in/about-us/';">
+                    <img src="SPONSOR LOGO/media png logos/ed times logo.png" class="sponsor-logo" alt="Foundation Partner">
+                    <div class="sponsor-name">ED Times</div>
+                </div>
+        </div>
+
+        <div class="row">
+            <div class="row">
+                <div class="sponsor-box" onclick="location.href='https://interviewbuddy.net/?srsltid=AfmBOoqqBwh_UBnLn1wVhQM83NuRdGKSlueuDfoQxf7wMiZj0tgmsUgI';">
+                    <img src="SPONSOR LOGO/interview.png" class="sponsor-logo" alt="Banking Partner">
+                    <div class="sponsor-name">Interview Buddy</div>
+                </div>
+                <div class="sponsor-box" onclick="location.href='https://maharashtradesha.com/';">
+                    <img src="SPONSOR LOGO/media png logos/MD png .png" class="sponsor-logo" alt="Gifting Partner">
+                    <div class="sponsor-name">Maharashtra Desha</div>
+                </div>
+                <div class="sponsor-box" onclick="location.href='https://saviinfra.com';">
+                    <img src="SPONSOR LOGO/media png logos/Metro News.png" class="sponsor-logo" alt="Foundation Partner">
+                    <div class="sponsor-name">Metro News</div>
+                </div>
+        </div>
+
+        <div class="row">
+            <div class="row">
+                <div class="sponsor-box" onclick="location.href='https://www.esakal.com/';">
+                    <img src="SPONSOR LOGO/media png logos/sakal.png" class="sponsor-logo" alt="Banking Partner">
+                    <div class="sponsor-name">Sakal</div>
+                </div>
+                <div class="sponsor-box" onclick="location.href='https://www.punekarnews.in/pune-metro-expansion-plans-unveiled-in-budget-ahead-of-civic-polls-state-approves-new-routes-awaits-central-nod/';">
+                    <img src="SPONSOR LOGO/media png logos/Punekar logo (2).png" class="sponsor-logo" alt="Gifting Partner">
+                    <div class="sponsor-name">Punekar News</div>
+                </div>
+                <div class="sponsor-box" onclick="location.href='https://youthincmag.com/';">
+                    <img src="SPONSOR LOGO/media png logos/youth.png" class="sponsor-logo" alt="Foundation Partner">
+                    <div class="sponsor-name">Youth Incorporated</div>
+                </div>
+        </div>
+
+        <div class="row">
+            <div class="row">
+                <div class="sponsor-box" onclick="location.href='https://akashvani.gov.in/';">
+                    <img src="SPONSOR LOGO/IMG-20250312-WA0002(1).jpg" class="sponsor-logo" alt="Banking Partner">
+                    <div class="sponsor-name">Akashvani</div>
+                </div>
+                <!-- <div class="sponsor-box" onclick="location.href='https://palmonas.com';">
+                    <img src="SPONSOR LOGO/Screenshot_2025-03-03-22-28-33-40_92460851df6f172a4592fca41cc2d2e6.jpg" class="sponsor-logo" alt="Gifting Partner">
+                    <div class="sponsor-name">Aamhi Punekar News</div>
+                </div> -->
+            
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-copyright" style="background-color: #000000;">
+            <p class="copyright">© COEP TECH REGATTA 2025</p>
+        </div>
+    </footer>
     
-  <body>
-    <p class="credits">Special thanks to  these Sponsors.</p>
-      <section>
-        <h1 style="font-size: larger; color: white;">SPONSORS</h1>
-          <div class="container">
-              <div class="card">
-                  <div class="content">
-                      <div class="imgBx">
-                          <img src="images/img3.jpeg">
-                      </div>
-                      <div class="contentBx">
-                          <!-- <h3>Borscht</h3> -->
-              <!-- <span>Hearty, flavorful, traditional Ukrainian soup</span> -->
-                      </div>
-                  </div>
-                  <ul class="sci">
-                      <li>
-                          <i class="fa fa-wikipedia-w"></i>
-                      </li>
-                      <li>
-                          <a href="https://www.campustimespune.com/" target="__blank" rel="noopener noreferrer"> About </a>
-                      </li>
-                      <li>
-                          <a href="https://www.campustimespune.com/" target="__blank" rel="noopener noreferrer"> them </a>
-                      </li>
-                  </ul>
-              </div>
-              <div class="card">
-                  <div class="content">
-                      <div class="imgBx">
-                          <img src="images/img1.png">
-                      </div>
-                      <div class="contentBx">
-                          <h3>Amphenol</h3>
-              <!-- <span>Iconic Ukrainian national trident symbol</span> -->
-                      </div>
-                  </div>
-                  <ul class="sci">
-                      <li>
-                          <i class="fa fa-wikipedia-w"></i>
-                      </li>
-                      <li>
-                          <a href="https://amphenol.com/" target="__blank" rel="noopener noreferrer"> About </a>
-                      </li>
-                      <li>
-                          <a href="https://amphenol.com/" target="__blank" rel="noopener noreferrer"> them </a>
-                      </li>
-                  </ul>
-              </div>
-              <div class="card">
-                  <div class="content">
-                      <div class="imgBx">
-                          <img src="images/img2.jpeg">
-                      </div>
-                      <div class="contentBx">
-                          <!-- <h3>Cossack</h3> -->
-              <!-- <span>Fierce, free-spirited Ukrainian warrior</span> -->
-                      </div>
-                  </div>
-                  <ul class="sci">
-                      <li>
-                          <i class="fa fa-wikipedia-w"></i>
-                      </li>
-                      <li>
-                          <a href="https://www.br-automation.com/en-in/about-us/customer-magazine/automotion-india/" target="__blank" rel="noopener noreferrer"> About </a>
-                      </li>
-                      <li>
-                          <a href="https://www.br-automation.com/en-in/about-us/customer-magazine/automotion-india/" target="__blank" rel="noopener noreferrer"> them </a>
-                      </li>
-                  </ul>
-              </div>
-
-              <div class="card">
-                <div class="content">
-                    <div class="imgBx">
-                        <img src="images/img4.png">
-                    </div>
-                    <div class="contentBx">
-                        <!-- <h3>Cossack</h3> -->
-            <!-- <span>Fierce, free-spirited Ukrainian warrior</span> -->
-                    </div>
-                </div>
-                <ul class="sci">
-                    <li>
-                        <i class="fa fa-wikipedia-w"></i>
-                    </li>
-                    <li>
-                        <a href="https://www.br-automation.com/en-in/about-us/customer-magazine/automotion-india/" target="__blank" rel="noopener noreferrer"> About </a>
-                    </li>
-                    <li>
-                        <a href="https://www.br-automation.com/en-in/about-us/customer-magazine/automotion-india/" target="__blank" rel="noopener noreferrer"> them </a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="card">
-                <div class="content">
-                    <div class="imgBx">
-                        <img src="images/img5.jpeg">
-                    </div>
-                    <div class="contentBx">
-                        <!-- <h3>Cossack</h3> -->
-            <!-- <span>Fierce, free-spirited Ukrainian warrior</span> -->
-                    </div>
-                </div>
-                <ul class="sci">
-                    <li>
-                        <i class="fa fa-wikipedia-w"></i>
-                    </li>
-                    <li>
-                        <a href="https://youthincmag.com/" target="__blank" rel="noopener noreferrer"> About </a>
-                    </li>
-                    <li>
-                        <a href="https://youthincmag.com/" target="__blank" rel="noopener noreferrer"> them </a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="card">
-                <div class="content">
-                    <div class="imgBx">
-                        <img src="images/img6.png">
-                    </div>
-                    <div class="contentBx">
-                        <!-- <h3>Cossack</h3> -->
-            <!-- <span>Fierce, free-spirited Ukrainian warrior</span> -->
-                    </div>
-                </div>
-                <ul class="sci">
-                    <li>
-                        <i class="fa fa-wikipedia-w"></i>
-                    </li>
-                    <li>
-                        <a href="https://sparklingbonds.com/" target="__blank" rel="noopener noreferrer"> About </a>
-                    </li>
-                    <li>
-                        <a href="https://sparklingbonds.com/" target="__blank" rel="noopener noreferrer"> them </a>
-                    </li>
-                </ul>
-            </div>
-          </div>
-      </section>
-    <p class="credits">Special thanks to  these Sponsors.</p>
-  </body>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const burger = document.querySelector(".burger");
+            const menu = document.querySelector(".full-menu");
+    
+            burger.addEventListener("click", function () {
+                console.log("Burger menu clicked");
+                menu.classList.toggle("show-menu");
+            });
+        });
+    </script>
+</body>
+</html>
