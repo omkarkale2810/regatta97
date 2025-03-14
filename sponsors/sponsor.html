@@ -27,7 +27,7 @@
     background-position: center;
     height: 100vh;
 } */
-
+/* 
 body {
     font-family: 'Georgia', serif;
     text-align: center;
@@ -41,10 +41,9 @@ body {
     background-size: contain;  
     background-position: center;
     background-attachment: fixed; 
-    background-size: 85% auto; 
     min-height: 100vh;
-}
-/* body {
+} */
+        body {
     font-family: 'Georgia', serif;
     text-align: center;
     background-color: #000000;
@@ -54,11 +53,12 @@ body {
     position: relative;
     background-image: url(bg1.jpg);
     background-repeat: no-repeat;
-    background-size: 75% auto; 
+    background-size: 100% auto; /* Increases width to 100% while keeping aspect ratio */
     background-position: center;
+    background-attachment: fixed; /* Keeps the background fixed */
     min-height: 100vh;
     width: 100vw;
-} */
+}
 
 
         h1 {
@@ -493,7 +493,7 @@ footer {
     </div>
 
     <footer>
-        <div class="footer-copyright" style="background-color: #000000;">
+        <div class="footer-copyright" style="background-color: #474646;">
             <p class="copyright">© COEP TECH REGATTA 2025</p>
         </div>
     </footer>
