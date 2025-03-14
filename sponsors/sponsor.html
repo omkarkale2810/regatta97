@@ -12,19 +12,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sponsors</title>
     <style>
-        body {
-            font-family: 'Georgia', serif;
-            text-align: center;
-            background-color: #000000;
-            color: white;
-            margin: 0;
-            padding: 20px;
-            position: relative;
-        }
+
+        /* body {
+    font-family: 'Georgia', serif;
+    text-align: center;
+    background-color: #000000;
+    color: white;
+    margin: 0;
+    padding: 20px;
+    position: relative;
+    background-image: url(bg1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+} */
+
+body {
+    font-family: 'Georgia', serif;
+    text-align: center;
+    background-color: #000000;
+    color: white;
+    margin: 0;
+    padding: 20px;
+    position: relative;
+    background-image: url(bg1.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;  
+    background-position: center;
+    background-attachment: fixed; 
+    background-size: 85% auto; 
+    min-height: 100vh;
+}
+/* body {
+    font-family: 'Georgia', serif;
+    text-align: center;
+    background-color: #000000;
+    color: white;
+    margin: 0;
+    padding: 20px;
+    position: relative;
+    background-image: url(bg1.jpg);
+    background-repeat: no-repeat;
+    background-size: 75% auto; 
+    background-position: center;
+    min-height: 100vh;
+    width: 100vw;
+} */
+
 
         h1 {
             font-family: cursive;
-            font-size: 50px;
+            font-size: 25px;
             font-weight: bold;
             color: rgb(255, 204, 0);
             /* text-shadow: 3px 3px 0 #ffcc00, 5px 5px 5px rgba(0, 0, 0, 0.5); */
@@ -243,7 +282,7 @@ footer {
 }
     </style>
 </head>
-<body class="side-lines">
+<body> <!--class="side-lines"-->
     <!-- <div id="loader"
         style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: white; display: flex; justify-content: center; align-items: center; z-index: 9999;">
         <dotlottie-player src="https://lottie.host/e6d792da-e5f6-4f5f-b0fb-82a9ce8a6081/MUec6cxuKL.lottie"
@@ -281,14 +320,15 @@ footer {
             </div>
         </div>
     </nav>
-    <h1 style="margin-top: 8rem; margin-bottom: 4rem;"> Marketing  Sponsors</h1>
-    <!-- <h2 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-size: 3rem; color: rgb(204, 152, 54); ">Marketing Sponsors</h2> -->
+    <!-- <h1 style="margin-top: 8rem;">Sponsors</h1> -->
+    <h1 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-size: 5rem; color: rgb(204, 152, 54); margin-top: 8rem;">Sponsors</h1>
     <div class="sponsor-container">
         <div class="row">
             <div class="sponsor-box" onclick="location.href='http://vilasjavdekar.co/vj-festive-season/?gad_source=1&gclid=Cj0KCQjwm7q-BhDRARIsACD6-fUcdIkzrU896ixIj2kxTIwYwN8fA36ugWD3v1oYzulrWro6cNHjWpsaAhFeEALw_wcB';">
+                <!-- <div class="sponsor-category">Title Sponsor</div> -->
+                <h1>Title Sponsors</h1>
                 <img src="SPONSOR LOGO/Screenshot 2025-01-29 231359.png" class="sponsor-logo" alt="Title Sponsor">
                 <div class="sponsor-name">VJ</div>
-                <div class="sponsor-category">Title Sponsor</div>
             </div>
             <!-- <div class="sponsor-box" onclick="location.href='https://amphenol.com/';">
                 <img src="SPONSOR LOGO/Screenshot 2025-03-12 121010.png" class="sponsor-logo" alt="Chief Sponsor">
@@ -299,12 +339,12 @@ footer {
 
         <div class="row">
             <div class="sponsor-box" onclick="location.href='https://amphenol.com';">
+                <h1>Chief Sponsors</h1>
                 <img src="SPONSOR LOGO/Screenshot 2025-03-12 121010.png" class="sponsor-logo" alt="Chief Sponsor">
                 <div class="sponsor-name">Amphenol</div>
-                <div class="sponsor-category">Chief Sponsor</div>
             </div>
         </div>
-
+        <h1>Partners</h1>
         <div class="row">
             <div class="sponsor-box" onclick="location.href='https://www.onlinesbi.sbi/';">
                 <img src="SPONSOR LOGO/images.png" class="sponsor-logo" alt="Banking Partner">
